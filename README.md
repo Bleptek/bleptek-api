@@ -45,7 +45,7 @@ dotnet run --project ./src/Bleptek.Api/
 
 The application is currently hosted at Simply.com.
 We use github actions as CI/CD tool. Upon pushing to the Dev branch, any changes will be deployed to our Test server.
-In the csproj file the following applies to the Debug configuration:
+In the csproj file the following applies to the Debug configuration: 
 
 ```xml
 <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
