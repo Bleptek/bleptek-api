@@ -1,0 +1,15 @@
+name: Variable substitution
+description: substitues environment variables for dev and production
+
+inputs:
+  sendgrid_apikey:
+    required: true
+
+runs:
+  using: "composite"
+  steps:
+    - uses: microsoft/variable-substitution@v1 
+      with:
+        files: './src/Bleptek.Api/appsettings.json'
+      env:
+        SendGrid.ApiKey: ${{inputs.sendgrid_apikey}}
